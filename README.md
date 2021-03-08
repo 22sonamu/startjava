@@ -1,4 +1,4 @@
-# 3강
+# 3강(Subactivity 연결하기 , 값 전달하기)
 
 ### Mainactivity
 
