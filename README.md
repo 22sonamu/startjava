@@ -20,6 +20,7 @@
 
 ![image](https://user-images.githubusercontent.com/73538957/110280911-01f35d80-801f-11eb-89d1-a162561483fc.png)
 
+
 ###### 이미지를 선택하면 1초간 토스트 메시지를 띄운다.
 
 
@@ -29,4 +30,13 @@
 # 5강 (Listview)
 
 ![image](https://user-images.githubusercontent.com/73538957/110283077-d83c3580-8022-11eb-8f53-e0928ff1b6e3.png)
+
+
+# 8강 (ShardPreferences)
+
+![image](https://user-images.githubusercontent.com/73538957/110285898-500c5f00-8027-11eb-9c91-ac5288684c98.png)
+
+###### 앱을 껐다 켜도 이 화면이 유지된다.
+
+
 
