@@ -41,7 +41,7 @@
 
 # 9강 (WebView)
 
-![image](https://user-images.githubusercontent.com/73538957/110335228-f7f54d00-8066-11eb-8dfe-597178307e63.png)
+<img src = "https://user-images.githubusercontent.com/73538957/110335791-95e91780-8067-11eb-8953-ba19608688dc.png" width="400px">
 
 
 
