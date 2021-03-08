@@ -52,5 +52,10 @@
 <img src = "https://user-images.githubusercontent.com/73538957/110349115-b61fd300-8075-11eb-9f50-e2a554b4c86e.png" width="400px">
  
 
+# 12강 (RecyclerView)
 
+<img scr = "https://user-images.githubusercontent.com/73538957/110357196-5e399a00-807e-11eb-9832-3b69581b08c2.png" width="400px">
+
+###### 추가버튼 - 데이터 추가
+###### 길게 누르기 - 데이터 삭제
 
