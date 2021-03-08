@@ -11,3 +11,16 @@
 ### Subactivity
 
 ![image](https://user-images.githubusercontent.com/73538957/110278114-f81b2b80-8019-11eb-9897-643d131d0a56.png)
+
+
+
+
+# 4강 (Imageview와 Toast 메시지)
+
+
+![image](https://user-images.githubusercontent.com/73538957/110280911-01f35d80-801f-11eb-89d1-a162561483fc.png)
+
+###### 이미지를 선택하면 1초간 토스트 메시지를 띄운다.
+
+
+![image](https://user-images.githubusercontent.com/73538957/110281029-39620a00-801f-11eb-9681-e88eeeb8b486.png)
