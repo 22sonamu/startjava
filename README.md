@@ -60,3 +60,15 @@
 ###### 추가버튼 - 데이터 추가
 ###### 길게 누르기 - 데이터 삭제
 
+# 15강 (Thread 와 Handler)
+
+<img src = "https://user-images.githubusercontent.com/73538957/110792599-f621c880-82b6-11eb-85ab-d6947f693903.png" width="400px">
+
+###### 앱을 종료해도 토스트 메시지가 뜬다. (Thread의 특징)
+
+
+<img src = "https://user-images.githubusercontent.com/73538957/110792746-1cdfff00-82b7-11eb-9545-c9ca28f921ab.png" width="400px">
+
+
+
+
