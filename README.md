@@ -70,5 +70,12 @@
 <img src = "https://user-images.githubusercontent.com/73538957/110792746-1cdfff00-82b7-11eb-9545-c9ca28f921ab.png" width="400px">
 
 
+# 34강 (db연동 , RecyclerView)
+
+<img src = "https://user-images.githubusercontent.com/73538957/111066683-a552df80-8503-11eb-80bd-b06b12c2623c.png" width="400px">
+
+
+###### 파이어베이스 사용
+![image](https://user-images.githubusercontent.com/73538957/111066725-e0eda980-8503-11eb-9383-a4044c62d7f6.png)
 
 
