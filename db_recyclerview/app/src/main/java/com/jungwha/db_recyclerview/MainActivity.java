@@ -26,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
     private Dialog dialog;
+    private FirebaseDatabase database;
+    private DatabaseReference databaseReference;
+    private ArrayList<User> arrayList;
 
 
     @Override
@@ -33,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn_add = (Button)findViewById(R.id.btn_add);
+        db_recyclerview();
+
+
+
 
 
 
@@ -57,6 +64,17 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+    public void db_recyclerview(){ //db와 recyclerview 연결하는 함수
+        recyclerView = findViewById(R.id.recyclerview);
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        arrayList = new ArrayList<>(); //User 객체를 담을 어레이 리스트(어댑터쪽으로)
+        database = FirebaseDatabase.getInstance(); //파이어베이스 데이터베이스를 가져와서 연동해라
+        databaseReference = database.getReference("room"); //db 테이블 연결 //트리구조에서 User테이블을 가리킨다.
     }
+}
+
+
 
 

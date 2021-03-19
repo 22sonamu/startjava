@@ -38,8 +38,15 @@ public class Dialog extends AppCompatDialogFragment {
                     public void onClick(DialogInterface dialog, int which) {
                         name = ed_place_plus.getText().toString();
                         FirebaseDatabase database = FirebaseDatabase.getInstance();
-                        DatabaseReference data_name = database.getReference(name);
-                        data_name.setValue(name);
+
+
+
+                        //나중에 구글 연결하면 유저이름 받아와서 Username에 넣어줘
+                        DatabaseReference data_name = database.getReference("Username");
+
+
+
+                        data_name.child("room").child(name).setValue("일단 올려줘");
 
                     }
                 });
