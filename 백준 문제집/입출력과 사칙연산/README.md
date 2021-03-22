@@ -46,3 +46,29 @@ public class Main {
 ```
 ##### \ 2개로 입력해야 \ 1개로 출력된다.
 
+# 10172(개)
+
+![image](https://user-images.githubusercontent.com/73538957/111946486-edcf5600-8b1e-11eb-9bcb-d8b2e5940ace.png)
+
+### 답
+```java
+public class Main {
+
+	public static void main(String[] args) {
+
+		System.out.println("|\\_/|");
+		System.out.println("|q p|   /}");
+		System.out.println("( 0 )\"\"\"\\");
+		System.out.println("|\"^\"`    |");
+		System.out.println("||_/=\\\\__|");
+
+	}
+
+}
+```
+
+
+
+
+
+
