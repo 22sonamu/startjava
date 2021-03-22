@@ -39,11 +39,6 @@ public class MainActivity extends AppCompatActivity {
         db_recyclerview();
 
 
-
-
-
-
-
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,8 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
         }
 
     public void db_recyclerview(){ //db와 recyclerview 연결하는 함수
@@ -71,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         arrayList = new ArrayList<>(); //User 객체를 담을 어레이 리스트(어댑터쪽으로)
         database = FirebaseDatabase.getInstance(); //파이어베이스 데이터베이스를 가져와서 연동해라
-        databaseReference = database.getReference("room"); //db 테이블 연결 //트리구조에서 User테이블을 가리킨다.
+        databaseReference = database.getReference("room"); //db 테이블 연결 //트리구조에서 room테이블을 가리킨다.
     }
 }
 
