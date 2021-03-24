@@ -46,11 +46,13 @@ public class Dialog extends AppCompatDialogFragment {
 
 
 
-                        data_name.child("room").child(name).setValue("일단 올려줘");
+                        data_name.child("room").child(name).setValue(name);
+
 
                     }
                 });
         ed_place_plus = view.findViewById(R.id.ed_place_plus);
         return builder.create();
     }
+
 }
