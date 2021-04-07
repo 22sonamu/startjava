@@ -8,6 +8,8 @@
 - 12강 (RecyclerView)
 - 15강 (Thread 와 Handler)
 - 34강 (db연동 , RecyclerView)
+- 백준 문제집
+- 기초 예제/
 - 실습은 각 파일의 readme 참고
 
 
