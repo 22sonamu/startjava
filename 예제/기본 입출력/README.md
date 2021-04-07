@@ -21,3 +21,61 @@ System.out.printf("x = %d and pi = %f \n", x, pi);
     - % 다음에 0이 있으면 0으로 채움
 
 ![image](https://user-images.githubusercontent.com/73538957/113899834-2900a300-9808-11eb-946e-ebd1e9ce5dac.png)
+
+- 예제 2
+```java
+int i = 97;
+System.out.printf("%o", i); //141
+System.out.printf("%x, i); //61
+System.out.printf("%c", i); //a
+System.out.printf("%5d", i); //   97
+System.out.printf("%05d", i);//00097
+String s = "Java";
+System.out.printf("%5s", s);// Java
+System.out.printf("%-5s", s);//Java
+double f = 3.14f;
+System.out.printf("%e", f); //3.14000e+00 -->지수표기법
+System.out.printf("%4.1", f); //  3.1
+System.out.printf("%04.1f", f); // 03.1 --> 알아보기
+System.out.printf("%-4.1f", f); //3.1
+```
+
+# 키보드로 입력
+
+1. Scanner 클래스의 경로 이름을 컴파일러에 알린다.
+```java
+import java.util.Scanner;
+```
+2. Scanner 객체 생성
+```java
+Scanner in = new Scanner(System.in);
+```
+
+3. 데이터 입력 받기
+```java
+int x = in.nextInt();
+```
+![image](https://user-images.githubusercontent.com/73538957/113904794-6b78ae80-980d-11eb-901d-9f5592ec1a54.png)
+
+- 예제
+   - 두개의 수를 입력받아 곱셈해주는 프로그램 만들기
+```java
+Scanner in = new Scanner(System.in);
+int x = in.nextInt();
+int y = in.nextInt();
+System.out.printf("%d * %d 는 %d입니다. " , x, y, x*y);
+```
+
+- 예제 2
+  - 원기둥의 밑면의 반지름, 높이를 입력하면 부피를 구해주는 프로그램 만들기
+```java
+Scanner in = new Scanner(System.in);
+System.out.println("원기둥 밑면의 반지름은?");
+int radius = in.nextInt();
+        
+System.out.println("원기둥의 높이는?");
+int height = in.nextInt();
+        
+System.out.println("원기둥의 부피는 "+ radius * radius * 3.14 * height);
+```
+
