@@ -1,4 +1,4 @@
-# 목차
+# 목차 --> 각 파일의 README참고
 - 3강(Subactivity 연결하기 , 값 전달하기)
 - 4강 (Imageview와 Toast 메시지)
 - 5강 (Listview)
@@ -8,7 +8,10 @@
 - 12강 (RecyclerView)
 - 15강 (Thread 와 Handler)
 - 34강 (db연동 , RecyclerView)
-- 실습은 각 파일의 readme 참고
+- 자바 백준 문제집
+- 자바 기초 
+- 안드로이드 스튜디오 실습
+
 
 
 
