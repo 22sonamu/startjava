@@ -81,7 +81,7 @@ byte x = (byte)3.14;
 
 //float의 3.14를 double로 형 변환 --> 데이터 손실 없음
 double d = (double)3.14f;
-
+```
 
 #### 예제
 ```java
