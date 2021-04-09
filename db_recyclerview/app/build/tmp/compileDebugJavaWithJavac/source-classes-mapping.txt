@@ -1,0 +1,22 @@
+com/jungwha/db_recyclerview/Dialog.java
+ com.jungwha.db_recyclerview.Dialog
+ com.jungwha.db_recyclerview.Dialog$1
+ com.jungwha.db_recyclerview.Dialog$2
+com/jungwha/db_recyclerview/CustomAdapter.java
+ com.jungwha.db_recyclerview.CustomAdapter
+com/jungwha/db_recyclerview/FoodActivity.java
+ com.jungwha.db_recyclerview.FoodActivity
+com/jungwha/db_recyclerview/InformActivity.java
+ com.jungwha.db_recyclerview.InformActivity
+com/jungwha/db_recyclerview/MainActivity.java
+ com.jungwha.db_recyclerview.MainActivity
+ com.jungwha.db_recyclerview.MainActivity$1
+ com.jungwha.db_recyclerview.MainActivity$2
+ com.jungwha.db_recyclerview.MainActivity$3
+ com.jungwha.db_recyclerview.MainActivity$4
+ com.jungwha.db_recyclerview.MainActivity$5
+ com.jungwha.db_recyclerview.MainActivity$6
+com/jungwha/db_recyclerview/BuildConfig.java
+ com.jungwha.db_recyclerview.BuildConfig
+com/jungwha/db_recyclerview/User.java
+ com.jungwha.db_recyclerview.User

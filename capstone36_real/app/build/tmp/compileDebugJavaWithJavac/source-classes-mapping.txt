@@ -1,0 +1,11 @@
+com/example/capstone36_real/Frag_inform.java
+ com.example.capstone36_real.Frag_inform
+com/example/capstone36_real/Frag_food.java
+ com.example.capstone36_real.Frag_food
+com/example/capstone36_real/MainActivity.java
+ com.example.capstone36_real.MainActivity
+ com.example.capstone36_real.MainActivity$1
+com/example/capstone36_real/BuildConfig.java
+ com.example.capstone36_real.BuildConfig
+com/example/capstone36_real/Frag_home.java
+ com.example.capstone36_real.Frag_home
