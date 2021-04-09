@@ -99,3 +99,99 @@ public class Hello {
 
 ```
 
+### 산술 연산자 사용시 주의할 점
+
+- % 연산자는 정수 타입만 사용한다.
+
+### 예제
+
+```java
+int remainder = 25 % 2;
+System.out.println(remander); //1
+int a = 10%2;
+
+if(a == 0)
+	System.out.println("10은 짝수입니다.");
+else
+	System.out.println("10은 홀수입니다.");
+
+```
+
+
+### 예제 2
+
+- 정수를 입력하면 짝수인지 홀수인지 알려주는 프로그램
+
+```java
+public class Hello {
+
+	public static void main(String[] args) {
+		int a;
+		Scanner in = new Scanner(System.in);
+		System.out.print("정수를 입력해주세요");
+		a = in.nextInt();
+
+		if (a % 2 == 0)
+			System.out.println("짝수입니다.");
+		else
+			System.out.println("홀수입니다.");
+
+	}
+
+}
+```
+
+
+### 예제 3
+
+- 초를 입력하면 시간, 분 , 초로 환산해 출력하는 프로그램
+```java
+public class Hello {
+
+	public static void main(String[] args) {
+		int a;
+		Scanner in = new Scanner(System.in);
+		System.out.print("초 단위 정수를 입력하세요");
+		a = in.nextInt();
+
+		int hour = a / 3600;
+		a = a % 3600;
+		int minute = a / 60;
+		a = a % 60;
+		System.out.printf("%d 시간 %d 분 %d초 입니다.", hour, minute, a);
+
+	}
+
+}
+```
+
+### 예제 3
+- 어떤수가 4와 5로 나누어지는지, 혹은 하나로는 나누어지지만 두 수 모두로는 나누어지지 않는지 출력하는 프로그램
+
+
+```java
+public class Hello {
+
+	public static void main(String[] args) {
+		int a;
+		Scanner in = new Scanner(System.in);
+		System.out.print("정수 입력");
+		a = in.nextInt();
+		boolean answer1 = false;
+		boolean answer2 = false;
+		boolean answer3 = false;
+		if (a % 4 == 0)
+			answer1 = true;
+		if (a % 5 == 0)
+			answer2 = true;
+		if (a % 5 == 0 && a % 4 == 0)
+			answer3 = true;
+		System.out.println("4로 나누어진다 : " + answer1);
+		System.out.println("5로 나누어진다 : " + answer2);
+		System.out.println("4와 5로 나누어진다 : " + answer3);
+
+	}
+
+}
+```
+
