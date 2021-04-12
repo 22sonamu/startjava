@@ -335,23 +335,223 @@ public class Hello {
 - 예제 5
 	- 단을 입력받아 구구단을 출력하는 프로그램
 
+```java
+public class Hello {
 
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
 
+		System.out.println("1-9사이의 수를 입력하세요");
+		int a = in.nextInt();
 
+		for (int i = 1; i < 10; i++) {
+			System.out.printf("%d * %d = %d \n", a, i, a * i);
+		}
+
+	}
+
+}
+```
 
 ### switch문
+```java
+switch(변수){
+	case 상수1 : 실행문
+	....
+	....
+	default : 실행문 //선택사항
+}
+```
+- 기존 switch 문
+	- 낙하 방식 -> 콜론 case이용
+```java
+public class Hello {
+
+	public static void main(String[] args) {
+		whoIsIt("호랑이");
+		whoIsIt("사자");
+		whoIsIt("곰팡이");
+//		호랑이는 포유류이다.
+//		사자는 포유류이다.
+//		어이쿠곰팡이는 ...이다.
+
+	}
+
+	static void whoIsIt(String bio) {
+		String kind = "";
+		switch (bio) {
+		case "호랑이":
+		case "사자":
+			kind = "포유류";
+			break;
+		default:
+			System.out.print("어이쿠");
+			kind = "...";
+		}
+		System.out.printf("%s는 %s이다.\n", bio, kind);
+
+	}
+
+}
+```
 
 
 
-### for문
+	
+- 자바 14이후 switch문
+	- 화살표 case이용
+	- 값을 반환할 수 있는 연산식으로 사용 가능
+	- 콤마로 연결된 상수를 case로 사용 가능
+	- Yiel문
+		- 값을 반환하면서 switch를 종료해줌(break문필요없음) 
+```java
+	public static void main(String[] args) {
+		whoIsIt("호랑이");
+		whoIsIt("사자");
+		whoIsIt("곰팡이");
+//		호랑이는 포유류이다.
+//		사자는 포유류이다.
+//		어이쿠곰팡이는 ...이다.
 
-### while문 
+	}
 
-### do ~ while문
+	static void whoIsIt(String bio) {
+		String kind = "";
+		switch (bio) {
+		case "호랑이", "사자" -> kind = "포유류";
+		default -> {
+			System.out.print("어이쿠");
+			kind = "...";
+		}
+		}
+		System.out.printf("%s는 %s이다.\n", bio, kind);
+
+	}
+
+}
+```
+```java
+String kind = switch(bio){
+	case "호랑이", "사자" -> "포유류";
+	default ->{
+		System.out.print("어이쿠");
+		yield "...";
+	}
+}
+```	
+
+- 만약 일치하는 case가 없으면 default로 이동하거나 switch문을 벗어난다.
+
+- 예제
+	- 키보드로 등수를 입력받아 칭찬하는 프로그램
+
+```java
+public class Hello {
+
+	public static void main(String[] args) {
+		whoIsIt("1등");
+		whoIsIt("2등");
+		whoIsIt("3등");
+		//...
+
+	}
+
+	static void whoIsIt(String bio) {
+		String cldcks = "";
+		switch (bio) {
+		case "1등" -> cldcks = "아주 잘했습니다.";
+		case "2등", "3등" -> cldcks = "잘했습니다.";
+		case "4등", "5등", "6등" -> cldcks = "보통입니다.";
+		default -> cldcks = "노력해야겠습니다.";
+		}
+		System.out.println(cldcks);
+
+	}
+
+}
+
+```
+
 
 # 분기문
 
 ### break문
 
+```java
+while(){
+	while(){
+	
+		break;
+	}
+}
+``` 
+- 맨 안쪽 while문 종료
+
+
+```java
+out:while(){
+
+	while(){
+	
+		break out;
+	}
+}
+```
+- out이라 표시된 while문 종료
+
+```
+int i = 1, j = 5;
+while(true){
+	System.out.println(i++);
+	if(i >= j)
+		break; //1234
+}
+```
+
+
+
+- 예제
+	- 1부터 입력된 수까지 합을 구해 출력한다. 999가 입력되면 프로그램 종료
+
+
+```java
+public class Hello {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int answer = 0;
+		System.out.println("정수를 입력하세요");
+		int a = in.nextInt();
+		int a1 = a;
+		while (true) {
+			if (a >= 999) {
+				System.out.println("프로그램을 종료합니다.");
+				break;
+
+			}
+			answer += a;
+			a -= 1;
+
+			if (a == 0) {
+				System.out.printf("1 부터 %d까지의 합은 %d입니다.", a1, answer);
+				break;
+			}
+
+		}
+
+	}
+
+}
+```
 ### continue문
+
+- 현재 반복만 건너뛰고 나머지 반복 계속 실행
+```java
+for (int i = 0; i<10; i++){
+	if (i % 2==0)
+		continue;
+	System.out.println(i); //13579
+}
+```
+
 
