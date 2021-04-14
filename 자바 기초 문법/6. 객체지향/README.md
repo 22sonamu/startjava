@@ -88,3 +88,75 @@ class Rectangle {
 }
 ```
 
+### 기초타입과 참조타입
+
+- 예제 
+	- 다음 코드를 사용해 실행할 수 있는 클래스를 만드시오
+```java
+public class Hello {
+
+	
+	public static void main(String[] args) {
+		
+		Phone myphone = new Phone();
+		myphone.model = "갤럭시 s8";
+		myphone.value = 100;
+		myphone.print();
+		
+		
+		Phone yourphone = new Phone();
+		yourphone.model = "G6";
+		yourphone.value = 85;
+		yourphone.print();
+	
+		
+	}
+		
+}
+```
+
+- 답
+```java
+class Phone{
+	String model = "";
+	int value = 0;
+	
+	void print() {
+		System.out.printf("%d 만원 짜리 %s 스마트폰", model, value);
+	}
+}
+```
+
+### 필드와 지역변수
+
+- 필드
+	- 기본값O
+	- 클래스 전체에서 사용 가능
+- 지역변수
+	- 기본값X(초기화 필요)
+	- final 로 지정
+	- 선언된 블록 내부의 선언된 후에서만 사용 가능
+
+```java
+int a= 0;
+double b;
+
+System.out.println(a+c); -->오류(지역변수)
+```
+
+
+### 멤버 접근
+
+- 클래스 안
+	- 필드 : 필드이름 or this.필드이름
+	- 메서드 : 메서드이름 or this.메서드이름
+
+- 클래스 밖
+	- 필드 : 클래스이름.필드이름
+	- 메서드 : 클래스이름.메서드이름()
+	
+	
+- 예제
+	- 클래스 MyExp -> 지수 계산해주는 클래스
+	- 정수값을 리턴하는 getValue()라는 멤버 메소드를 포함하는 클래스
+```java
