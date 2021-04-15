@@ -191,4 +191,38 @@ public class Main{
     
 }
 ```
+### 캡슐화
+- 클래스 멤버를 클래스 내부에 감추는 것
+- private로 지정
+- 외부에서 사용할땐 접근자와 설정자가 필요함
+	- 접근자 : private로 지정된 필드에 값을 반환 (일반적으로 get사용)
+	- 설정자 : private로 지정된 필드의 값을 변경 (일반적으로 set사용)
+```java
+class Circle {
+    private double radius;
+    public double getRadius(){
+        return radius;
+    }
+    public void setRadius(double r){
+        this.radius = r;
+    }
+    double findArea(){
+        return 3.14 * radius * radius;
+    }
+    void show(double x, double y){
+        System.out.prinf("반지름 = %.1f, 넓이 = %.1f\n", x, y);
+    }
+}
 
+
+public class Main{
+    public static void main(String[] args){
+        Circle myCircle = new Circle();
+        myCircle.setRadius(10.0);
+        myCircle.show(myCircle.getRadius(), myCircle.findArea());      
+        
+    }
+    
+}
+   
+```
