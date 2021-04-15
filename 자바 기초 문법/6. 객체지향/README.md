@@ -160,3 +160,35 @@ System.out.println(a+c); -->오류(지역변수)
 	- 클래스 MyExp -> 지수 계산해주는 클래스
 	- 정수값을 리턴하는 getValue()라는 멤버 메소드를 포함하는 클래스
 ```java
+class MyExp{
+    int base = 0;
+    int exp = 0;
+    
+    int getValue(){
+        int answer = 1;
+        for(int i = 0; i<exp; i++)
+            answer *= base;
+        return answer;
+            
+        }
+    void print(){
+        System.out.printf("%d의 %d승 = %d", this.base, this.exp, this.getValue());
+    }
+}
+
+
+public class Main{
+    public static void main(String[] args){
+        MyExp number1 = new MyExp();
+        number1.base = 2;
+        number1.exp = 3;
+        number1.print();
+        
+        
+        
+        
+    }
+    
+}
+```
+
