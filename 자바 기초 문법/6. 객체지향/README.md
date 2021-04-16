@@ -226,3 +226,45 @@ public class Main{
 }
    
 ```
+
+- 예제
+	- 앞서 실습한 Phone class의 멤버를 은닉하고 동일한 결과가 나오도록 phone class 변경
+```java
+class Phone {
+	private String model;
+	private int value;
+
+	public String getmodel() {
+		return model;
+	}
+
+	public void setmodel(String s) {
+		this.model = s;
+	}
+
+	public int getvalue() {
+		return value;
+
+	}
+
+	public void setvalue(int i) {
+		this.value = i;
+	}
+
+	void print() {
+		System.out.println(value + "만원 짜리 " + model + "스마트폰");
+
+	}
+}
+
+public class Hello {
+
+	public static void main(String[] args) {
+		Phone myphone = new Phone();
+		myphone.setmodel("갤럭시 s8");
+		myphone.setvalue(100);
+		myphone.print();
+	}
+
+}
+```
