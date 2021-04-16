@@ -274,6 +274,40 @@ public class Hello {
 - 초기화하지 않는다면 기본값으로 초기화된 객체만 생성할 수 있다.
 - 반환 타입은 없다.
 - 오버로딩 할 수 있다.
+```java
+class Circle{
+	double radius;
+	String color;
+	public Circle(double r, String c){
+		radius = r;
+		color = c;
+	}
+	public Circle(double r){
+		radius = r;
+		color = "파랑";
+	}
+	public Circle(String c){
+		radius = 10.0;
+		color c;
+	}
+	public Circle(){
+		radius = 10.0;
+		color = c;
+	}
+}
+```
+- this()로 생성자에서 다른 생성자를 호출할 수 있다.
+```java
+public Circle(){
+	radius = 10.0;
+	this("빨강");
+}
+```
+- 연속 호출할수있다.
+```java
+person.setName("민국").setAge(21).sayHello();
+```
+
 
 ```java
 class 이름 = new class 이름(); <--생성자
@@ -372,41 +406,20 @@ public class Hello {
 }
 ```
 
-- 오버로딩 예제
-```java
-class Circle{
-	double radius;
-	String color;
-	public Circle(double r, String c){
-		radius = r;
-		color = c;
-	}
-	public Circle(double r){
-		radius = r;
-		color = "파랑";
-	}
-	public Circle(String c){
-		radius = 10.0;
-		color c;
-	}
-	public Circle(){
-		radius = 10.0;
-		color = c;
-	}
-}
-```
-	
+
+
 
 ### 매개변수 값 
 
+
+1. 값 복사 여부
 - call by reference
 	- 매개변수의 원래 주소에 값을 저장
 	- 클랙스 객체를 인수로 전달했을 때 사용
 - call by value
 	- 매개변수의 값을 복사해서 처리
-	
-	
-	
+
+
 ```java
 class Number{
 	int x;
@@ -432,6 +445,78 @@ public class Hello {
 
 }
 ```
+2. 공유 가능 여부
+- 인스턴스 변수
+	- static키워드로 지정되지 않음
+	- 공유되지 않은 필드
+	- 인스턴스마다 자신의 필드를 생성
+	- 일반적인 필드 변수가 여기에 속함
+- 정적 변수 혹은 클래스 변수
+	- static 으로 정의하여 모든 인스턴스가 공유하는 필드
+	- 객체 생성 전에도 접근 가능
+		- 객체 이름 대신 클래스 이름으로 접근 (클래스이름.정적변수이름)
+	- 정적 메서드
+		- 정적 변수와 지역변수 사용 가능
+		- this 사용 불가
+		- 객체와 관련된 인스턴스 변수 사용 불가
+		- 객체와 관련된 인스턴스 메서드 사용 불가
+		- 객체 생성 전에도 접근 가능
+			- 객체 이름대신 클래스 이름으로 접근(클래스이름.정적메서드이름())
+```java
+class Util{
+	static int forTimes(int i){
+	return i * 4;
+	}
+}
+public class UtilDemo{
+	public static void main(String[] args){
+		System.out.println(Util.fourTimes(5)); //20
+	}
+}
+
+```
+	
+- 예제
+	- 생성된 모든 자동차와 빨간색 자동차의 갯수를 출력하는 Car 클래스 정의	
+
+```java
+
+class Car {
+	static int number = 0;
+	static int rednumber = 0;
+	String color;
+
+	public Car(String s) {
+		this.color = s;
+		number += 1;
+		if (s.equals("red"))
+			rednumber += 1;
+	}
+
+	static int getNumOfCar() {
+		return number;
+	}
+
+	static int getNumOfRedCar() {
+		return rednumber;
+	}
+}
+
+public class Hello {
+
+	public static void main(String[] args) {
+		Car c1 = new Car("red");
+		Car c2 = new Car("blue");
+		Car c3 = new Car("red");
+		System.out.printf("자동차 수: %d, 빨간색 자동차 수: %d", Car.getNumOfCar(), Car.getNumOfRedCar());
+
+	}
+
+}
+```
+
+
+
 
 - 예제
 	- 3개의 숫자를 입력받아 swap시키는 프로그램
@@ -556,3 +641,43 @@ public class Hello {
 
 }
 ```
+
+- 예제 4 
+	- 복소수 프로그램
+
+```java
+class Complex {
+
+	double a;
+	double b;
+
+	public Complex(double a) {
+		this.a = a;
+		this.b = 0;
+
+	}
+
+	public Complex(double a, double b) {
+		this.a = a;
+		this.b = b;
+
+	}
+
+	void print() {
+		System.out.println(this.a + "+" + this.b + "i");
+	}
+}
+
+public class Hello {
+
+	public static void main(String[] args) {
+		Complex c1 = new Complex(2.0);
+		c1.print();
+		Complex c2 = new Complex(1.5, 2.5);
+		c2.print();
+
+	}
+
+}
+```
+
