@@ -268,3 +268,109 @@ public class Hello {
 
 }
 ```
+
+### 생성자
+- 클래스로 객체를 생성할 때는 필드를 초기화해야한다.
+- 초기화하지 않는다면 기본값으로 초기화된 객체만 생성할 수 있다.
+- 반환 타입은 없다.
+- 오버로딩 할 수 있다.
+
+```java
+class 이름 = new class 이름(); <--생성자
+```
+- 예제 (생성자 정의)
+```java
+class Circle{
+	private double radius;
+	public Circle(double r){ //생성자
+		radius = r;
+	}
+}
+
+public class CircleDemo_{
+	public static void main(String[] args){
+		Circle mycircle = new Circle(10.0);
+	}
+}
+```
+
+
+- 예제 2
+	- 원의 면적을 구하는 CircleConstructor 클래스 만들기
+
+
+```java
+class CircleConstructor {
+	double pi = 3.14;
+	double radius;
+	double area;
+
+	public CircleConstructor(double radius) {
+		area = radius * radius * pi;
+		System.out.println("원의 면적은" + area + "입니다.");
+
+	}
+
+}
+
+public class Hello {
+
+	public static void main(String[] args) {
+
+		CircleConstructor circle = new CircleConstructor(100.0);
+	}
+
+}
+```
+
+- 예제 3
+	- 삼각형을 나타내는 클래스 작성
+		- 속성: 실숫값의 밑변과 높이(은닉)
+		- 생성자 : 멤버변수에 인자 전달
+		- 동작 : 넓이 구하기, 접근자
+
+```java
+class Triangle {
+	private double alx;
+	private double height;
+
+	public void setalx(double d) {
+		alx = d;
+	}
+
+	public double getalx() {
+		return this.alx;
+	}
+
+	public void setheight(double d) {
+		height = d;
+	}
+
+	public double getheight() {
+		return this.height;
+	}
+
+	public Triangle(double a, double b) {
+		this.alx = a;
+		this.height = b;
+	}
+
+	public double findArea() {
+		double answer = alx * height * 0.5;
+		return answer;
+	}
+}
+
+public class Hello {
+
+	public static void main(String[] args) {
+
+		Triangle t1 = new Triangle(10.0, 5.0);
+		System.out.println(t1.findArea());
+	}
+
+}
+```
+
+
+	
