@@ -372,5 +372,187 @@ public class Hello {
 }
 ```
 
-
+- 오버로딩 예제
+```java
+class Circle{
+	double radius;
+	String color;
+	public Circle(double r, String c){
+		radius = r;
+		color = c;
+	}
+	public Circle(double r){
+		radius = r;
+		color = "파랑";
+	}
+	public Circle(String c){
+		radius = 10.0;
+		color c;
+	}
+	public Circle(){
+		radius = 10.0;
+		color = c;
+	}
+}
+```
 	
+
+### 매개변수 값 
+
+- call by reference
+	- 매개변수의 원래 주소에 값을 저장
+	- 클랙스 객체를 인수로 전달했을 때 사용
+- call by value
+	- 매개변수의 값을 복사해서 처리
+	
+	
+	
+```java
+class Number{
+	int x;
+	int y;
+	
+}
+public class Hello {
+	static void swap(Number z) {
+		int temp = z.x;
+		z.x = z.y;
+		z.y = temp;
+	}
+
+	public static void main(String[] args) {
+
+		Number n = new Number();
+		n.x = 10;
+		n.y = 20;
+		System.out.println("swap()메소드 호출 전" + n.x + ","+n.y);//10,20
+		swap(n);
+		System.out.println("swap()메소드 호출 후"+ n.x+","+n.y);//20,10
+	}
+
+}
+```
+
+- 예제
+	- 3개의 숫자를 입력받아 swap시키는 프로그램
+```java
+class Number {
+	int a;
+	int b;
+	int c;
+
+}
+
+public class Hello {
+	static void swap(Number n) {
+		int start = n.a;
+		n.a = n.c;
+		n.c = n.b;
+		n.b = start;
+
+	}
+
+	public static void main(String[] args) {
+
+		Scanner in = new Scanner(System.in);
+		int a = in.nextInt();
+		int b = in.nextInt();
+		int c = in.nextInt();
+		Number n = new Number();
+		n.a = a;
+		n.b = b;
+		n.c = c;
+		System.out.println("전" + n.a + n.b + n.c);
+
+		swap(n);
+		System.out.println("후" + n.a + n.b + n.c);
+
+	}
+
+}
+```
+- 예제 2
+	- 삼각형 넓이 비교하는 프로그램
+```java
+class Triangle {
+	private double alx;
+	private double height;
+
+	public void setalx(double d) {
+		alx = d;
+	}
+
+	public double getalx() {
+		return this.alx;
+	}
+
+	public void setheight(double d) {
+		height = d;
+	}
+
+	public double getheight() {
+		return this.height;
+	}
+
+	public Triangle(double a, double b) {
+		this.alx = a;
+		this.height = b;
+	}
+
+	public double findArea() {
+		double answer = alx * height * 0.5;
+		return answer;
+	}
+}
+
+public class Hello {
+	
+	static void isSameArea(Triangle t1, Triangle t2) {
+		if (t1.findArea() == t2.findArea())
+			System.out.println("같습니다.");
+		else
+			System.out.println("틀립니다.");
+		
+	}
+
+	public static void main(String[] args) {
+
+		Triangle t1 = new Triangle(10.0, 5.0);
+		Triangle t2 = new Triangle(5.0, 10.0);
+		isSameArea(t1, t2);
+	}
+		
+
+}
+```
+
+- 예제 3
+	- 길이 속성만 가진 직선을 모델링한 line클래스를 작성해라
+```java
+class Line {
+	int l;
+
+	String isSameLine(Line line) {
+		if (this.l == line.l)
+			return "맞습니다";
+		else
+			return "틀립니다.";
+	}
+
+	public Line(int a) {
+		this.l = a;
+
+	}
+}
+
+public class Hello {
+
+	public static void main(String[] args) {
+		Line a = new Line(1);
+		Line b = new Line(1);
+		System.out.println(a.isSameLine(b));
+
+	}
+
+}
+```
