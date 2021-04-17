@@ -150,6 +150,32 @@ public class Hello {
 ```
 - 예제 2
   - 단어 맞추기 프로그램
+```java
+public class Hello {
+
+	public static void main(String[] args) {
+
+		String hiddenString = "hello";
+		StringBuffer outputString = new StringBuffer();
+		Scanner scan = new Scanner(System.in);
+		String user;
+		for (int i = 0; i<hiddenString.length(); i++)
+			outputString.append("-");
+		System.out.println("\n 단어("+hiddenString.length()+"글자" + "):"+outputString);
+		System.out.println("l 문자를 입력하세요");
+		user = scan.next();
+		char ch = user.charAt(0);
+		for (int i = 0;i<hiddenString.length(); i++) {
+			if (hiddenString.charAt(i) == ch) {
+				outputString.setCharAt(i, ch);
+				System.out.println("\n단어:"+outputString);
+			}
+		}
+	}
+
+}
+```
+
 
 
 
